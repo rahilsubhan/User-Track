@@ -11,9 +11,9 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use(express_1.default.urlencoded({ extended: true })); // Middleware to parse URL-encoded bodies i.e form submissions
 app.use((0, cookie_parser_1.default)()); //Middleware to parse cookies
-const users_js_1 = __importDefault(require("/users.js"));
-const userReg_js_1 = __importDefault(require("/userReg.js"));
-const userLogin_js_1 = __importDefault(require("/userLogin.js"));
+const users_js_1 = __importDefault(require("./users.js"));
+const userReg_js_1 = __importDefault(require("./userReg.js"));
+const userLogin_js_1 = __importDefault(require("./userLogin.js"));
 app.get('/', (req, res) => {
     res.json({
         "Hello World!": "Welcome to the Express.js server!", "status": "running"
